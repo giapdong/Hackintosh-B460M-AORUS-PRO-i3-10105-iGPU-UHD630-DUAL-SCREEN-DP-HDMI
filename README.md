@@ -1,4 +1,4 @@
-# GIGABYTE-B460M-AORUS-PRO-i3-10105-iGPU-UHD630
+# GIGABYTE-B460M-AORUS-PRO-i3-10105-iGPU-UHD630-DUAL-SCREEN-DP-HDMI
 
 ## Hardware
 
@@ -12,7 +12,9 @@
 | Monitor          | 2* AOC 24B1XH5 24" IPS 75Hz FHD |
 | WiFi adapter     | USB TP-Link TL-WN725N Wireless N150Mbps |
 
-Because Motherboard only support 1 gate HDMI, 1 DP, 1 DVI. So i must using adapter convert from DP to HDMI for second screen
+**Note 1:** I provide 2 version of config.plist file with named single.config.plist and dual.config.plist. That mean if you using single screen, you dont care Issues in this README file, all is good. Else, you using dual screen => You will need read <a href="#issues">Issues chapter</a>.
+
+**Note 2:** Because Motherboard only support 1 gate HDMI, 1 DP, 1 DVI. So i must using adapter convert from DP to HDMI for second screen
 ![](images/Hardware_adapter_dp_hdmi.jpeg)
 
 ## CPU Support
@@ -41,6 +43,10 @@ I used default setting for Commet Lake in OpenCore guide.
 
 ![](images/BIOS_settings.png)
 
+## WiFi
+
+I using `USB TP-Link TL-WN725N Wireless N150Mbps`, you can follow official guide [Here](https://www.tp-link.com/support/download/tl-wn725n/) or download in releases of this repo [Here](https://github.com/giapdong/Hackintosh-B460M-AORUS-PRO-i3-10105-iGPU-UHD630/releases)
+
 ## Issues
 
 | Summary | Illustrator | Description |
@@ -50,7 +56,3 @@ I used default setting for Commet Lake in OpenCore guide.
 | Cannot using built-in screen record | | Built-in screen record opened with CMD + SHIFT + 5 not work for me |
 | Cannot install OBS Studio | | I cannot install OBS Studio for screen record |
 | Using 2 screen | ![](images/Issue_two_screen_setting.png) | If you using 75Hz screen, must change to 75Hz in System Preferences > Displays |
-
-## WiFi
-
-I using `USB TP-Link TL-WN725N Wireless N150Mbps`, you can follow official guide [Here](https://www.tp-link.com/support/download/tl-wn725n/) or download in releases of this repo [Here](https://github.com/giapdong/Hackintosh-B460M-AORUS-PRO-i3-10105-iGPU-UHD630/releases)
