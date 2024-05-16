@@ -5,9 +5,9 @@
 | Configuration    | Model  |
 | ---------------- | ------ |
 | CPU              | Intel core i3 10105 |
-| Motherboard      | GIGABYTE B460M AORUS PRO (rev. 1.0) |
+| Motherboard      | GIGABYTE B460M AORUS PRO (rev. 1.0) ara May 2020 |
 | Graphics card    | Intel® UHD Graphics 630 |
-| RAM              | G.SKILL Ripjaws V 1x8GB 2800 MHz |
+| RAM              | G.SKILL Ripjaws V 2x8GB 2800 MHz |
 | Disk             | SSD KINGSTON A2000 250GB M.2 NVMe |
 | Monitor          | 2* AOC 24B1XH5 24" IPS 75Hz FHD |
 | WiFi adapter     | USB TP-Link TL-WN725N Wireless N150Mbps |

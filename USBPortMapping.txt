@@ -1,0 +1,55 @@
+# https://vietrender.com/huong-dan-cach-mapping-usb-tren-windows
+
+[HƯỚNG DẪN] Cách Mapping USB trên Windows.
+
+Như các bạn đã biết Mapping USB là cần thiết đối với tất cả các máy đang chạy Hackintosh, giúp các cổng usb 2.0, 3.0, type-c nhận đầy đủ, giúp chúng ta fix các lỗi liên quan đến vấn đề Sleep,... Và tất cả OS nên Mapping USB.
+Chuẩn bị: Bạn cần tải tool và kext sau
+
+    Tool: https://github.com/USBToolBox/tool/releases/tag/0.0.9 (Tải file window.exe)
+    Kext: https://github.com/USBToolBox/kext/releases/tag/1.1.0 (bản release)
+    Một chiếc USB 3.0 / 2.0 hoặc Type-C
+
+Cách thực hiện:
+1. Các bạn mở Windows.ese vừa down, chọn 'D' để discover (phát
+hiện) các cổng usb.
+2. Tiếp theo, tại cửa sổ mới sau khi bấm 'D' các bạn có thể thấy
+các port trên đó, chúng ta bắt đầu:
+
+    Cắm USB 3.0/2.0 vào lần lượt vào từng cổng trên máy với thời gian delay là 5s (cắm vô -> đợi 5s -> rút ra -> cắm vô .... cứ thế đến khi cắm hết các cổng thì thôi), sau đó nếu muốn Mapping Type-C thì cũng cắm Type-C vô luôn (cắm vô -> đợi 5s -> rút ra)
+    Sau khi cắm và tool đã phát hiện hết port các bạn bấm 'B' để quay trở lại.
+
+3. Tiếp đó, bấm 'S' chỉnh sửa và build kext
+
+    Hãy quan sát kỹ xem các port có đuôi "operating at USB 1.1", camera đã có "Type 255" hay chưa, nếu chưa các bạn gõ như sau: T:số port:255 rồi enter. (ví dụ: mình có bluetooth ở port 10 thì mình sẽ gõ như sau: T:10:255) Khi đó, các port đó đã có Type 255.
+    Đối với các port 2.0,3.0, tool đã tự set type, chúng ta có thể bỏ qua.
+    Đối với các port Type-c, tool cũng đã tự set tyoe, cũng có thể bỏ qua.
+
+4. Sau khi làm xong bước 3, các bạn bấm 'D' để tắt những port
+trống rồi sau đó bấm 'K' để build kext.
+5. Bấm 'K' xong thì tại thư mục chứa Windows.exe sẽ tạo ra một
+kext tên UTBMap.kext, chúng ta copy nó và bỏ vào thư mục
+Kexts của Opencore/Clover
+6. Các bạn giải nén kext đã down ở bước chuẩn bị ra
+(USBToolBox-1.0.1-RELEASE.zip) và copy USBToolBox.kext và
+cũng copy vào thư mục Kexts của Opencore/Clover.
+
+7. Nếu các bạn đang sử dụng USBInjectAll.kext hoặc
+USBPort.kext hoặc SSDT-UIAC.aml thì hãy xoá rồi đến bước
+tiếp theo
+8. Copy cả 2 kext trên xong thì các bạn mở Config.plist bằng
+Propertree và bấm tổ hợp phím Ctrl + R (chọn đường dẫn
+EFI/OC rồi chọn Select folder để snap lại nhé. (lưu vào config)
+9. Hãy chắc chắn 'xhciportlimit' trong config = False
+(xhciportlimit = False)
+10. Bài hướng dẫn này có lẽ hơi dài và khó hiểu, mong các
+bạn thông cảm, rất mong nó sẽ hữu ích với các bạn.
+
+Bài hướng dẫn đến đây là kết thức, cảm ơn các bạn đã theo dõi :DD
+
+~Good Day ~
+
+ 
+
+ 
+
+Theo: hackintosh- opencore
